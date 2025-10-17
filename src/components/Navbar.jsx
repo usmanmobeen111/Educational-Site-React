@@ -4,6 +4,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 
 const navLinks = [
   { name: "Home", href: "#home" },
+  { name: "Services", href: "#services" },
   { name: "Courses", href: "#courses" },
   { name: "Instructors", href: "#instructors" },
   { name: "Testimonials", href: "#testimonials" },
@@ -17,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-primary shadow-lg fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           
           {/* Logo */}
@@ -39,7 +40,7 @@ const Navbar = () => {
                   >
                     {name}
                   </a>
-                  <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-tertiary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                  <span className="absolute left-1/2 -bottom-1 w-0 h-[2px] bg-tertiary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
                 </li>
               ))}
             </ul>
@@ -77,7 +78,7 @@ const Navbar = () => {
               className="relative hover:text-tertiary transition duration-300 group"
             >
               {name}
-              <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-tertiary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+              <span className="absolute left-1/2 -bottom-1 w-0 h-[2px] bg-tertiary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           ))}
 
