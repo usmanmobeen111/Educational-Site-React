@@ -2,17 +2,24 @@ import React, { useState } from 'react';
 import { GrTechnology } from "react-icons/gr";
 import { HiMenu, HiX } from "react-icons/hi";
 
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "Courses", href: "#courses" },
+  { name: "Instructors", href: "#instructors" },
+  { name: "Testimonials", href: "#testimonials" },
+  { name: "FAQ", href: "#faq" },
+  { name: "Contact", href: "#contact" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav className="bg-primary shadow-lg fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-3xl text-white font-bold flex items-center gap-2">
@@ -24,38 +31,21 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <ul className="flex space-x-8">
-              <li>
-                <a href="#home" className="text-white hover:text-tertiary transition duration-300 font-medium">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#courses" className="text-white hover:text-tertiary transition duration-300 font-medium">
-                  Courses
-                </a>
-              </li>
-              <li>
-                <a href="#instructors" className="text-white hover:text-tertiary transition duration-300 font-medium">
-                  Instructors
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="text-white hover:text-tertiary transition duration-300 font-medium">
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="text-white hover:text-tertiary transition duration-300 font-medium">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-white hover:text-tertiary transition duration-300 font-medium">
-                  Contact
-                </a>
-              </li>
+              {navLinks.map(({ name, href }) => (
+                <li key={name} className="relative group">
+                  <a
+                    href={href}
+                    className="text-white hover:text-tertiary transition duration-300 font-medium"
+                  >
+                    {name}
+                  </a>
+                  <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-tertiary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                </li>
+              ))}
             </ul>
-            <button className="bg-tertiary text-secondary px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 shadow-md">
+
+            {/* Glowing Button */}
+            <button className="bg-tertiary text-secondary px-6 py-2 rounded-full font-semibold shadow-[0_0_0px_0px_rgba(255,215,0,0)] hover:shadow-[0_0_20px_4px_rgba(255,215,0,0.8)] transition-all duration-500 ease-in-out">
               Start Learning
             </button>
           </div>
@@ -64,43 +54,38 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-tertiary transition duration-300 focus:outline-none"
+              className="text-white hover:text-tertiary transition relative duration-300 focus:outline-none z-[100] cursor-pointer"
             >
               {isOpen ? <HiX className="h-8 w-8" /> : <HiMenu className="h-8 w-8" />}
             </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-primary shadow-lg">
-              <a href="#home" className="block px-3 py-2 text-white hover:text-tertiary transition duration-300 font-medium">
-                Home
-              </a>
-              <a href="#courses" className="block px-3 py-2 text-white hover:text-tertiary transition duration-300 font-medium">
-                Courses
-              </a>
-              <a href="#instructors" className="block px-3 py-2 text-white hover:text-tertiary transition duration-300 font-medium">
-                Instructors
-              </a>
-              <a href="#testimonials" className="block px-3 py-2 text-white hover:text-tertiary transition duration-300 font-medium">
-                Testimonials
-              </a>
-              <a href="#faq" className="block px-3 py-2 text-white hover:text-tertiary transition duration-300 font-medium">
-                FAQ
-              </a>
-              <a href="#contact" className="block px-3 py-2 text-white hover:text-tertiary transition duration-300 font-medium">
-                Contact
-              </a>
-              <div className="px-3 py-2">
-                <button className="bg-tertiary text-secondary px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 shadow-md w-full">
-                  Start Learning
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+      {/* Mobile Menu - Sliding from Right with Blur */}
+      <div
+        className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-white/10 backdrop-blur-md shadow-xl transform transition-transform duration-500 ease-in-out z-40 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col mt-20 text-secondary space-y-6 px-6 items-center text-xl">
+          {navLinks.map(({ name, href }) => (
+            <a
+              key={name}
+              href={href}
+              onClick={toggleMenu}
+              className="relative hover:text-tertiary transition duration-300 group"
+            >
+              {name}
+              <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-tertiary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+          ))}
+
+          {/* Glowing Button in Mobile */}
+          <button className="bg-tertiary text-secondary px-6 py-2 rounded-full font-semibold shadow-[0_0_0px_0px_rgba(255,215,0,0)] hover:shadow-[0_0_20px_4px_rgba(255,215,0,0.8)] transition-all duration-500 ease-in-out w-full">
+            Start Learning
+          </button>
+        </div>
       </div>
     </nav>
   );
