@@ -10,7 +10,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="faq" className="py-20  pt-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Subtle background gradient glow */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-tertiary/10 via-transparent to-primary/10 blur-3xl opacity-70"></div>
 

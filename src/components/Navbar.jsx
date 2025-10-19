@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { GrTechnology } from "react-icons/gr";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -14,7 +14,22 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target) && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <nav className="bg-primary shadow-lg fixed top-0 left-0 w-full z-50">
@@ -65,6 +80,7 @@ const Navbar = () => {
 
       {/* Mobile Menu - Sliding from Right with Blur */}
       <div
+        ref={menuRef}
         className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-white/10 backdrop-blur-md shadow-xl transform transition-transform duration-500 ease-in-out z-40 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
