@@ -6,6 +6,7 @@ import Courses from '../components/Courses'
 import Instructors from '../components/Instructors'
 import Testimonials from '../components/Testimonials'
 import FAQ from '../components/FAQ'
+import Contact from '../components/Contact'
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <Instructors/>
       <Testimonials/>
       <FAQ/>
+      <Contact/>
     </div>
   )
 }
