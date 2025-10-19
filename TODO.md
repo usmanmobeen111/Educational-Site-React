@@ -1,5 +1,8 @@
-- [x] Style Instructors.jsx to match Courses.jsx design with custom colors
-- [x] Convert Instructors.jsx to a carousel with pagination (tertiary color active, gray inactive, 6 dots for 6 instructors)
-- [x] Add swipe events using framer-motion
-- [x] Enhance card styling for more amazing look
-- [x] Make carousel show 3 cards on large screens, 2 on medium, 1 on small
+# TODO for Improving Testimonials Component
+
+- [x] Update Testimonials.jsx to include a card-based layout using Tailwind CSS classes and custom colors from index.css (primary, secondary, tertiary).
+- [x] Replace rating text with star icons from react-icons (use AiFillStar for filled stars and AiOutlineStar for empty stars).
+- [x] Implement a star rating display function that shows full stars based on the integer part of the rating.
+- [x] Add responsive grid layout for testimonials cards.
+- [x] Style cards with background, borders, shadows, and hover effects to make it visually appealing.
+- [ ] Test the component by running the development server and verifying the layout and star ratings.
