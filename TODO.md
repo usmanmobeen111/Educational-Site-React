@@ -23,4 +23,13 @@
 - [x] Add form validation for required fields and email format.
 - [x] Implement form submission handling with success/error states.
 - [x] Make the form responsive and visually appealing with proper spacing and transitions.
-- [ ] Test the contact form by running the development server.
+- [x] Test the contact form by running the development server.
+
+# TODO for Improving Footer Component
+
+- [x] Create an amazing footer with navigation links.
+- [x] Add social media icons (Facebook, Instagram, GitHub) with hover effects.
+- [x] Use Framer Motion for animations.
+- [x] Style the footer using custom colors from index.css (primary, secondary, tertiary).
+- [x] Make the footer responsive and visually appealing.
+- [ ] Test the footer by running the development server.

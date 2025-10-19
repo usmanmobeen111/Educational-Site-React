@@ -7,6 +7,7 @@ import Instructors from '../components/Instructors'
 import Testimonials from '../components/Testimonials'
 import FAQ from '../components/FAQ'
 import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <Testimonials/>
       <FAQ/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }

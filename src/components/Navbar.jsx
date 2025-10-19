@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="text-3xl text-white font-bold flex items-center gap-2">
               <GrTechnology className="h-10 w-10 text-tertiary" />
-              EdTech
+              EduLearn
             </div>
           </div>
 

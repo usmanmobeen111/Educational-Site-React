@@ -3,7 +3,7 @@ import { courseData } from '../data/coursesData'
 
 const Courses = () => {
   return (
-    <section className="py-16">
+    <section id='courses' className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-secondary">
           Our <span className='text-tertiary'>Amazing</span> Courses
