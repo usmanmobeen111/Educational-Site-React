@@ -7,7 +7,7 @@ export const courseData = [
     level: "Beginner to Advanced",
     duration: "12 Weeks",
     btn: "Enroll Now",
-    img: "/images/courses/webdev.jpg",
+    img: "/images/courses/webdev.webp",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const courseData = [
     level: "Intermediate",
     duration: "6 Weeks",
     btn: "Start Learning",
-    img: "/images/courses/js.jpg",
+    img: "/images/courses/js.webp",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const courseData = [
     level: "Beginner",
     duration: "8 Weeks",
     btn: "Join Course",
-    img: "/images/courses/python.jpg",
+    img: "/images/courses/python.webp",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const courseData = [
     level: "Beginner to Pro",
     duration: "10 Weeks",
     btn: "Design With Us",
-    img: "/images/courses/graphic-design.jpg",
+    img: "/images/courses/graphic-design.webp",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const courseData = [
     level: "Intermediate",
     duration: "7 Weeks",
     btn: "Become a Designer",
-    img: "/images/courses/ui-ux.jpg",
+    img: "/images/courses/ui-ux.webp",
   },
   {
     id: 6,
@@ -57,6 +57,6 @@ export const courseData = [
     level: "Advanced",
     duration: "9 Weeks",
     btn: "Level Up",
-    img: "/images/courses/cpp.png",
+    img: "/images/courses/cpp.webp",
   },
 ];

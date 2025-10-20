@@ -4,7 +4,7 @@ export const instructorsData = [
     name: "Ethan Walker",
     role: "Full Stack Developer",
     expertise: "MERN Stack, REST APIs, DevOps",
-    img: "/images/instructors/ethan.jpg",
+    img: "/images/instructors/ethan.webp",
     bio: "Ethan is a Silicon Valley engineer with 7+ years building high-performance web apps and scalable systems.",
   },
   {
@@ -12,7 +12,7 @@ export const instructorsData = [
     name: "Olivia Martinez",
     role: "UI/UX Designer",
     expertise: "Figma, Adobe XD, Design Systems",
-    img: "/images/instructors/olivia.jpg",
+    img: "/images/instructors/olivia.webp",
     bio: "Olivia designs beautiful, human-centered interfaces and helps students master the art of product design.",
   },
   {
@@ -20,7 +20,7 @@ export const instructorsData = [
     name: "Noah Bennett",
     role: "Data Scientist",
     expertise: "Python, Machine Learning, Pandas",
-    img: "/images/instructors/noah.jpg",
+    img: "/images/instructors/noah.webp",
     bio: "Noah simplifies complex AI and ML topics into practical lessons that actually make sense for real-world work.",
   },
   {
@@ -28,7 +28,7 @@ export const instructorsData = [
     name: "Ava Thompson",
     role: "Graphic Designer",
     expertise: "Photoshop, Illustrator, Branding",
-    img: "/images/instructors/ava.jpg",
+    img: "/images/instructors/ava.webp",
     bio: "Ava has worked with top agencies and teaches the creative process behind strong, memorable brand visuals.",
   },
   {
@@ -36,7 +36,7 @@ export const instructorsData = [
     name: "Liam Brooks",
     role: "AI Engineer",
     expertise: "TensorFlow, Neural Networks, NLP",
-    img: "/images/instructors/liam.jpg",
+    img: "/images/instructors/liam.webp",
     bio: "Liam builds intelligent AI systems and makes advanced machine learning concepts accessible and exciting.",
   },
   {
@@ -44,7 +44,7 @@ export const instructorsData = [
     name: "Chloe Anderson",
     role: "Frontend Developer",
     expertise: "React, Tailwind CSS, Next.js",
-    img: "/images/instructors/chloe.jpg",
+    img: "/images/instructors/chloe.webp",
     bio: "Chloe creates stunning user interfaces and teaches modern frontend tools with a practical, hands-on approach.",
   },
 ];

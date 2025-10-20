@@ -72,7 +72,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-radial from-tertiary to-primary rounded-full"></div>
               <img
-                src="/images/hero.png"
+                src="/images/hero.webp"
                 className="relative w-full h-auto rounded-full "
                 alt="Hero Image - Learning Platform"
               />
